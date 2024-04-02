@@ -20,7 +20,10 @@ export default function Header() {
       <nav>
         <ul className="flex gap-x-6 text-sm">
           {routes.map(({ name, path }) => (
-            <li key={path}>
+            <li
+              key={path}
+              className="text-white/50 hover:text-white transition"
+            >
               <Link href={path}>{name}</Link>
             </li>
           ))}
