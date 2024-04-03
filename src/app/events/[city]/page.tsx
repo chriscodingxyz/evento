@@ -1,3 +1,4 @@
+import EventsList from "@/components/events-list";
 import H1 from "@/components/h1";
 import { EventoEvent } from "@/lib/types";
 import React from "react";
@@ -9,7 +10,7 @@ export default async function EventsPage({
 }) {
   const city = params.city;
   const cityCamel = city.charAt(0).toUpperCase() + city.slice(1);
-
+  //fetch
   const response = await fetch(
     `https://bytegrad.com/course-assets/projects/evento/api/events?city=${city}`
   );
@@ -25,9 +26,7 @@ export default async function EventsPage({
         {city !== "all" && `Events in ${cityCamel}`}
       </H1>
 
-      {dataEvents.map((event) => (
-        <section key={event.id}>{event.name}</section>
-      ))}
+      <EventsList events={dataEvents} />
     </main>
   );
 }
