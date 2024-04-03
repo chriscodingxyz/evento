@@ -5,6 +5,7 @@ import React from "react";
 import Logo from "./logo";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 
 const routes = [
   {
@@ -30,14 +31,17 @@ export default function Header() {
               className={clsx(
                 "hover:text-white flex items-center relative transition",
                 {
-                  "text-white border-b border-accent": activePathname === path,
+                  "text-white": activePathname === path,
                   "text-white/50": activePathname !== path,
                 }
               )}
             >
               <Link href={path}>{name}</Link>
               {activePathname === path && (
-                <div className="bg-accent h-1 w-full absolute bottom-0"></div>
+                <motion.div
+                  layoutId="header-active-link"
+                  className="bg-accent h-1 w-full absolute bottom-0"
+                ></motion.div>
               )}
             </li>
           ))}
