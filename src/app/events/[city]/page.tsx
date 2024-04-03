@@ -21,7 +21,7 @@ export default async function EventsPage({
       className="flex flex-col items-center justify-center
     py-24 px-[20px] min-h-[110vh]"
     >
-      <H1>
+      <H1 className="mb-10">
         {city === "all" && "All Events"}
         {city !== "all" && `Events in ${cityCamel}`}
       </H1>
