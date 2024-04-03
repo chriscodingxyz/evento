@@ -3,7 +3,10 @@ import React from "react";
 
 export default function EventsPage() {
   return (
-    <main>
+    <main
+      className="flex flex-col items-center justify-center
+    py-24 px-[20px] min-h-[110vh]"
+    >
       <H1>Events in Austin</H1>
     </main>
   );
