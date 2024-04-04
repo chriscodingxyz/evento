@@ -22,14 +22,20 @@ export async function getEvents(city: string) {
   // );
   // const events: EventoEvent[] = await response.json();
 
-  const events =
-    city === "all"
-      ? await prisma.eventoEvent.findMany()
-      : await prisma.eventoEvent.findMany({
-          where: {
-            city: capitalizeFirst(city),
-          },
-        });
+  // const events =
+  //   city === "all"
+  //     ? await prisma.eventoEvent.findMany()
+  //     : await prisma.eventoEvent.findMany({
+  //         where: {
+  //           city: capitalizeFirst(city),
+  //         },
+  //       });
+
+  const events = await prisma.eventoEvent.findMany({
+    where: {
+      city: city === "all" ? undefined : capitalizeFirst(city),
+    },
+  });
 
   return events;
 }
