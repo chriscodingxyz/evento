@@ -9,7 +9,7 @@ export default function EventCard({ event }: { event: EventoEvent }) {
       className="flex-1 basis-80 h-[380px] max-w-[500px]"
       href={`/event/${event.slug}`}
     >
-      <section className="w-full h-full flex flex-col  bg-white/[3%] rounded-xl overflow-hidden relative hover:scale-105 active:scale-[1.02] transition">
+      <section className="w-full h-full flex flex-col  bg-white/[3%] rounded-xl overflow-hidden relative state-effects">
         <Image
           className="h-[60%] object-fit"
           src={event.imageUrl}
