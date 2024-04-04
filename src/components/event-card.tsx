@@ -11,7 +11,7 @@ export default function EventCard({ event }: { event: EventoEvent }) {
     >
       <section className="w-full h-full flex flex-col  bg-white/[3%] rounded-xl overflow-hidden relative state-effects">
         <Image
-          className="h-[60%] object-fit"
+          className="h-[60%] object-cover"
           src={event.imageUrl}
           alt={event.name}
           width={500}
