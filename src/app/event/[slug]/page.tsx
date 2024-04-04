@@ -68,7 +68,7 @@ export default async function EventPage({
               {event.name}
             </H1>
             <p className="whitepsace-nowrap text-xl text-white/75">
-              Organized by <span className="italic">{event.organizer}</span>
+              Organized by <span className="italic">{event.organizerName}</span>
             </p>
             <button className="bg-white/20 text-lg capitalize bg-blur mt-5 lg:mt-auto w-[95vw] sm:w-full py-2 border-white/10  border-2 state-effects">
               Get Tickets
