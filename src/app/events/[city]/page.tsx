@@ -5,11 +5,15 @@ import Loading from "./loading";
 import { Metadata } from "next";
 import { capitalizeFirst } from "@/lib/utils";
 
-export function generateMetadata({
-  params,
-}: {
+type Props = {
   params: { city: string };
-}): Metadata {
+};
+
+type EventsPageProps = Props & {
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export function generateMetadata({ params }: Props): Metadata {
   const { city } = params;
   return {
     title: city === "all" ? "All Events" : `Events in ${capitalizeFirst(city)}`,
@@ -18,11 +22,11 @@ export function generateMetadata({
 
 export default async function EventsPage({
   params,
-}: {
-  params: { city: string };
-}) {
+  searchParams,
+}: EventsPageProps) {
   const city = params.city;
   // const cityCamel = city.charAt(0).toUpperCase() + city.slice(1);
+  const page = searchParams.page || 1;
 
   return (
     <main
@@ -34,7 +38,7 @@ export default async function EventsPage({
         {city !== "all" && `Events in ${capitalizeFirst(city)}`}
       </H1>
       <Suspense fallback={<Loading />}>
-        <EventsList city={city} />
+        <EventsList city={city} page={+page} />
       </Suspense>
     </main>
   );
