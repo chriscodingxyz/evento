@@ -4,6 +4,7 @@ import React, { Suspense } from "react";
 import Loading from "./loading";
 import { Metadata } from "next";
 import { capitalizeFirst } from "@/lib/utils";
+import { z } from "zod";
 
 type Props = {
   params: { city: string };
@@ -20,13 +21,20 @@ export function generateMetadata({ params }: Props): Metadata {
   } as Metadata;
 }
 
+const pageNumberSchema = z.coerce.number().int().positive().optional();
+
 export default async function EventsPage({
   params,
   searchParams,
 }: EventsPageProps) {
   const city = params.city;
   // const cityCamel = city.charAt(0).toUpperCase() + city.slice(1);
-  const page = searchParams.page || 1;
+  // const page = searchParams.page || 1;
+  const parsedPage = pageNumberSchema.safeParse(searchParams.page);
+  if (!parsedPage.success) {
+    throw new Error("Invalid page number");
+  }
+  // const page = parsedPage.data || 1;
 
   return (
     <main
@@ -37,8 +45,8 @@ export default async function EventsPage({
         {city === "all" && "All Events"}
         {city !== "all" && `Events in ${capitalizeFirst(city)}`}
       </H1>
-      <Suspense key={city + page} fallback={<Loading />}>
-        <EventsList city={city} page={+page} />
+      <Suspense key={city + parsedPage.data} fallback={<Loading />}>
+        <EventsList city={city} page={parsedPage.data} />
       </Suspense>
     </main>
   );
