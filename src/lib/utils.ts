@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge";
 import { PrismaClient } from "@prisma/client";
 import prisma from "./db";
 import { notFound } from "next/navigation";
+import { unstable_cache } from "next/cache";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -12,7 +13,10 @@ export function capitalizeFirst(string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-export async function getEvents(city: string, page = 1) {
+export const getEvents = unstable_cache(async function (
+  city: string,
+  page = 1
+) {
   // const response = await fetch(
   //   `https://bytegrad.com/course-assets/projects/evento/api/events?city=${city}`,
   //   {
@@ -55,9 +59,9 @@ export async function getEvents(city: string, page = 1) {
   }
 
   return { events, totalCount };
-}
+});
 
-export async function getEvent(slug: string) {
+export const getEvent = unstable_cache(async function (slug: string) {
   // const response = await fetch(
   //   `https://bytegrad.com/course-assets/projects/evento/api/events/${slug}`
   // );
@@ -73,4 +77,4 @@ export async function getEvent(slug: string) {
     return notFound();
   }
   return event;
-}
+});
