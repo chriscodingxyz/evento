@@ -1,0 +1,80 @@
+export const events = [
+  {
+    "id": 13,
+    "name": "Fashion Runway",
+    "slug": "fashion-runway",
+    "city": "London",
+    "location": "London Fashion Week Venue",
+    "date": "2030-11-12T00:00:00.000Z",
+    "organizerName": "Chic Trends Agency",
+    "imageUrl": "https://images.unsplash.com/photo-1613909671501-f9678ffc1d33?q=80&w=2485&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=100",
+    "description": "Witness the latest trends on the runway. Top designers will showcase their collections, setting the stage for the future of fashion.",
+    "createdAt": "2024-04-04T17:22:26.168Z",
+    "updatedAt": "2024-04-05T17:10:24.835Z"
+  },
+  {
+    "id": 2,
+    "name": "Harmony Festival",
+    "slug": "harmony-festival",
+    "city": "London",
+    "location": "London Convention Center",
+    "date": "2030-11-15T00:00:00.000Z",
+    "organizerName": "Music Enthusiasts LLC",
+    "imageUrl": "https://images.unsplash.com/photo-1617184003170-1f266c325ff3?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=100",
+    "description": "Harmony Festival is a celebration of all music genres, bringing together musicians, artists, and music enthusiasts from around the world. Experience a day filled with live performances, interactive workshops, and a vibrant atmosphere of creativity and harmony. Join us for an unforgettable musical journey!",
+    "createdAt": "2024-04-04T17:22:26.146Z",
+    "updatedAt": "2024-04-05T17:10:24.835Z"
+  },
+  {
+    "id": 9,
+    "name": "Tech Innovators Summit",
+    "slug": "tech-innovators-summit",
+    "city": "Brighton",
+    "location": "Brighton Convention Center",
+    "date": "2030-11-15T00:00:00.000Z",
+    "organizerName": "InnovateTech Inc.",
+    "imageUrl": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=100",
+    "description": "The Tech Innovators Summit is where visionaries, entrepreneurs, and tech enthusiasts converge. Explore the latest technological advancements, attend insightful keynotes from industry leaders, and participate in hands-on workshops. Connect with innovators, pitch your ideas, and be a part of shaping the future of technology.",
+    "createdAt": "2024-04-04T17:22:26.160Z",
+    "updatedAt": "2024-04-05T17:10:24.835Z"
+  },
+  {
+    "id": 4,
+    "name": "Rock the City Concert",
+    "slug": "rock-the-city-concert",
+    "city": "London",
+    "location": "London Music Hall",
+    "date": "2030-11-18T00:00:00.000Z",
+    "organizerName": "Rock On Productions",
+    "imageUrl": "https://images.unsplash.com/photo-1576659743073-c97526882c18?q=80&w=2338&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=100",
+    "description": "Get ready to rock out at Rock the City Concert! Experience electrifying performances by top rock bands, enjoy high-energy music, and immerse yourself in an unforgettable night of pure rock and roll.",
+    "createdAt": "2024-04-04T17:22:26.150Z",
+    "updatedAt": "2024-04-05T17:10:24.835Z"
+  },
+  {
+    "id": 7,
+    "name": "Indie Music Showcase",
+    "slug": "indie-music-showcase",
+    "city": "London",
+    "location": "London Indie Spot",
+    "date": "2030-11-25T00:00:00.000Z",
+    "organizerName": "Indie Vibes Records",
+    "imageUrl": "https://images.unsplash.com/photo-1482443462550-d2c99314ab6a?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=100",
+    "description": "Discover the next big indie artists at the Indie Music Showcase. Experience live performances by emerging talents, support independent music, and be part of a vibrant community of music enthusiasts and artists.",
+    "createdAt": "2024-04-04T17:22:26.154Z",
+    "updatedAt": "2024-04-05T17:10:24.835Z"
+  },
+  {
+    "id": 19,
+    "name": "Dance Fusion Festival",
+    "slug": "dance-fusion-festival",
+    "city": "London",
+    "location": "London Street Dance Studio",
+    "date": "2030-11-28T00:00:00.000Z",
+    "organizerName": "Rhythm Revolution",
+    "imageUrl": "https://images.unsplash.com/photo-1504609813442-a8924e83f76e?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=100",
+    "description": "Experience a blend of dance styles from around the world. Participate in dance workshops, watch electrifying performances, and dance the night away.",
+    "createdAt": "2024-04-04T17:22:26.179Z",
+    "updatedAt": "2024-04-05T17:10:24.835Z"
+  }
+];

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { unstable_cache } from "next/cache";
 import { capitalizeFirst } from "./utils";
 import "server-only";
+import fs from "fs";
 
 export const getEvents = unstable_cache(async function (
   city: string,
