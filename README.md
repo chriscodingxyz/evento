@@ -1,6 +1,3 @@
-### README.md for `evento`
-
-````markdown
 # Evento
 
 **Evento** is a Next.js application designed for users to find local events. It leverages the power of React, TypeScript, and Tailwind CSS to provide a seamless experience for discovering and attending events in your area.
@@ -27,10 +24,10 @@ To set up the project locally, follow these steps:
 ### Installation Steps
 
 1. Clone the repository:
+
    ```sh
    git clone https://github.com/chriscodingxyz/evento.git
    ```
-````
 
 2. Navigate to the project directory:
    ```sh
@@ -98,7 +95,4 @@ Chris Coding - [chriscodingxyz](https://github.com/chriscodingxyz) - chriscoding
 
 Project Link: [https://github.com/chriscodingxyz/evento](https://github.com/chriscodingxyz/evento)
 
-```
-
 Feel free to customize the content further to better match the specifics and nuances of your project.
-```
